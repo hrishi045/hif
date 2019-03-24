@@ -19,7 +19,7 @@ for (let i = 0; i < 0xff; i++) {
 
 const dataBuf = Buffer.from(data);
 
-lzma.LZMA().compress(dataBuf, 0, (zbuf) => {
+lzma.LZMA().compress(dataBuf, 9, (zbuf) => {
   const final = Buffer.concat([magicNumbers, fileSize, zbuf]);
   fs.writeFile(outfile, final, (err) => {
     if (err) console.error("Error writing file");
