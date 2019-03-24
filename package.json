@@ -1,0 +1,9 @@
+{
+  "name": "hif",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lzma-native": "^4.0.3"
+  }
+}

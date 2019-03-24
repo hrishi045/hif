@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HIF Example</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <style>
+    body {
+      padding: 2em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+    }
+
+    section {
+      padding: 10px;
+    }
+
+    section {
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 576px) {
+      .grid {
+        grid-template-columns: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>HIF - Hraphics Interchange Format</h2>
+  <h3>Specification</h3>
+    <pre><code>0xDE 0xAD 0xFA 0xCE
+0x[W1] 0x[W2] 0x[H1] 0x[H2]
+[data, LZMA compressed]</code></pre>
+  <h3>Why?</h3>
+  <p>Why not?</p>
+  <h3>Comparison:</h3>
+  <div class="grid">
+    <section>
+      <p>HIF (26K):</p>
+      <hif path="potato.hif"></hif>
+    </section>
+    <section>
+      <p>PNG (2.5K):</p>
+      <img src="potato.png" alt="">
+    </section>
+    <section>
+      <p>GIF (33K):</p>
+      <img src="potato.gif" alt="">
+    </section>
+    <section>
+      <p>JPG (8.5K):</p>
+      <img src="potato.jpg" alt="">
+    </section>       
+  </div>
+  <script src="lzma-d-min.js"></script>
+  <script src="display.js"></script>
+</body>
+</html>
