@@ -18,9 +18,11 @@ for (let i = 0; i < 0xff; i++) {
 }
 
 const dataBuf = Buffer.from(data);
+console.log(dataBuf);
 
 lzma.LZMA().compress(dataBuf, 9, (zbuf) => {
   const final = Buffer.concat([magicNumbers, fileSize, zbuf]);
+  console.log(final);
   fs.writeFile(outfile, final, (err) => {
     if (err) console.error("Error writing file");
     console.log("Wrote successfully");

@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "lzma-native": "^4.0.3"
+    "lzma-native": "^4.0.3",
+    "png.js": "^0.2.1"
   }
 }
